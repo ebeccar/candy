@@ -1,0 +1,374 @@
+/*
+Theme Name: Ebeccar Candy Theme
+Author: Rebecca Löfgren
+Description: Portfolio template for Rebecca Löfgren
+Version: 1.0.0
+*/
+ 
+ 
+
+/* General 
+============================= */
+
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    overflow: auto;
+    background: white;
+    position: fixed;
+    width: 100%;
+    margin: 0px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.wrapper {
+    width: calc(100% - 60px);
+    margin: 43px 30px 0px 30px;
+}
+/* Header 
+============================= */
+
+.header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    background: white;
+    z-index: 10;
+    padding: 10px 20px;
+}
+
+.header ul {
+    margin: 0px !important;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+}
+.header ul li a {
+    font-family: "anton";
+    text-transform: uppercase;
+    color: #000;
+    position: relative;
+    font-size: 14px;
+}
+
+.header ul li.current-menu-item a:after {
+    width: 100%;
+	position: absolute;
+    left: 0px;
+    top: 9px;
+    height: 3px;
+    background-color: #000;
+    content: "";
+    width: 100%;
+}
+
+.header ul li:hover a:after {
+    animation: strike 0.25s linear 1;
+	position: absolute;
+    left: 0px;
+    top: 9px;
+    height: 3px;
+    background-color: #000;
+    content: "";
+    width: 100%;
+}
+
+
+/* Typography 
+============================= */
+
+h1, h2, h3 {
+    font-family: "anton";
+    text-transform: uppercase;
+    font-weight: normal;
+}
+h1 {
+    font-size: 60px;
+    line-height: 1.4em;
+    margin: 0px;
+}
+.home h1 {
+    font-size: 70px;
+    line-height: 1.2em;
+}
+h2 {
+    font-size: 25px;
+}
+.case-focus h2 {
+    font-family: "inconsolata";
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+h3 {
+    font-size: 21px;
+    margin: 0px 0px 10px 0px;
+    letter-spacing: 0.4px;
+}
+
+.post-content p, .post-content li {
+    font-family: "inconsolata";
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+.case-focus p {
+    font-size: 16px;
+}
+a {
+	text-decoration: none;
+}
+
+.button {
+    font-family: "anton";
+    color: #000;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #fff;
+    display: inline-block;
+    line-height: 21px;
+    transition: 0.5s ease all;
+}
+
+.button:hover {
+    background: black;
+    color: #fff;
+}
+
+.button + .button {
+    margin-left: 20px;
+}
+
+/* Start 
+============================= */
+/* Grid, start */
+.main-content {
+    min-height: calc(100vh - 60px);
+    max-width: 100%;
+    position: relative;
+}
+
+/* Focus case, start */
+
+.case-focus {
+    position: fixed;
+    left: 20px;
+    top: 43px;
+    width: calc(50% - 10px);
+    height: calc(100vh - 23px);
+    overflow: hidden;
+    pointer-events: none;
+}
+.case-focus .case {
+    height: calc(100vh - 30px);
+    padding: 30px;
+    background-size: cover;
+    background: #fcefef;
+    transition: 0.2s ease all;
+}
+.focus-head {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: #fff;
+    width: 100%;
+}
+
+.case-focus .button {
+    margin-top: 20px;
+    pointer-events: all;
+}
+.focus-meta {
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    width: 100%;
+    background: white;
+    font-family: inconsolata;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.focus-meta a {
+    color: #000;
+    font-family: "anton";
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.about-meta p {
+    margin: 0px;
+    font-size: 14px;
+}
+
+
+/* All cases, start */
+
+.case-all {
+    border-left: 2px solid #333;
+    padding-left: 40px;
+    width: calc(50% - 90px);
+    float: right;
+    position: relative;
+}
+.case-all:before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 4px;
+    width: 8px;
+    height: 3px;
+    background: white;
+}
+
+.case-all:after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 10px;
+    width: 8px;
+    height: 3px;
+    background: white;
+}
+
+.work-content {
+    margin-bottom: 50px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 25px;
+    display: block;
+    color: #000;
+}
+.selected {
+    position: absolute;
+    left: -66px;
+    top: -6px;
+    font-size: 30px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 59px;
+    border-radius: 50%;
+    transition: 0.2s all ease;
+}
+.selected.hover {
+	top: -12px;
+}
+
+.work-content p {
+    margin: 0px;
+}
+.tags .tag {
+    font-family: "inconsolata";
+    font-size: 0.8rem;
+    position: relative;
+    padding: 0px 10px 0px 20px;
+}
+
+.tag .jam:before {
+    position: absolute;
+    left: 0px;
+    top: 2px;
+}
+
+.work-content h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.work-content.active h3:after {
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    height: 3px;
+    background-color: #000;
+    animation: strike 0.25s linear 1;
+    content: "";
+    width: 100%;
+}
+
+@keyframes strike {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+.case-image {
+    height: 360px;
+    width: 550px;
+    background-size: contain;
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    background-repeat: no-repeat;
+    margin-left: -275px;
+    background-position: center center;
+    transition: 0.2s ease all;
+    object-fit: contain;
+    object-position: top;
+    box-shadow: 1px 1px 21px rgba(0, 0, 0, 0.22);
+}
+.case-image#ani {
+	bottom: -40px;
+}
+
+/* Sidebar, start */
+.sidebar {
+    margin: 0px;
+    width: calc((100%/6) - 0px);
+    position: fixed;
+    top: 100px;
+    right: 40px;
+    height: calc(100% - 140px);
+    z-index: -1;
+}
+.sidebar .about-meta {
+    background: #fff0ef;
+    padding: 10px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.sidebar .about-meta:after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: white;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    transform: rotate(45deg);
+}
+
+#footer {
+    display: none;
+}
+
+
+/* Single 
+============================= */
+.single .case-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+}
+
+.single .case-all {
+    padding-top: 10px;
+}
